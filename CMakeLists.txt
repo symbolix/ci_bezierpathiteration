@@ -15,7 +15,7 @@ set(current_package_slot "cinder-dev-0.9.1")
 set(local_packages $ENV{UNIMOG_LOCAL_PACKAGES})
 set(current_package_absolute_path ${local_packages}/libs/${current_package_architecture}/${current_package_slot})
 # Force find_package to use our custom lib.
-get_filename_component( CINDER_PATH "${current_package_absolute_path}" ABSOLUTE )
+get_filename_component(CINDER_PATH "${current_package_absolute_path}" ABSOLUTE)
 
 MESSAGE(STATUS ";--------------------------------------------------------------------------------")
 MESSAGE(STATUS "; <${PROJECT_NAME}> CMake Script v0.0.2.[7]")
