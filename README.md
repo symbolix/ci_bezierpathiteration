@@ -22,17 +22,17 @@ This should be pointing to the `libcinder` folder structure.
   regarding the project.
 
 * The required CMake module `cinderMakeApp` is located inside the `./cmake`
-  folder. Once the local `./cmake` folder is appended to the `${CMAKE_MODULE_PATH}`, the `cinderMakeApp.cmake` file is accessible and the `ci_make_app` is available.
+  folder. Once the local `./cmake` folder is appended to the `${CMAKE_MODULE_PATH}`, the `cinderMakeApp.cmake` file is included and the `ci_make_app` function becomes available.
 
 * The `ci_make_app` function is a wrapper that accepts various arguments and
-  the intention is fecth the configuration from the CMake chain located inside
+  the intention is to fecth the configuration from the CMake chain located inside
   the `CINDER_PATH` structure.
 
-* The first script accessed from the remote `CINDER_PATH` location is `${CINDER_PATH}/proj/cmake/configure.cmake")'
+* The first script accessed from the remote `CINDER_PATH` location is `${CINDER_PATH}/proj/cmake/configure.cmake'
 
-* `libcinder` is imported from the following location:
-  `${CINDER_PATH}/lib/<platform>/<build_type>` which in the current example,
-  under `OSX`, would be `${CINDER_PATH}/lib/macosx/Release`
+* After that `libcinder` is imported from the following location as na
+  `imported target`:
+  `${CINDER_PATH}/lib/<platform>/<build_type>` which in the current case under `OSX`, would be `${CINDER_PATH}/lib/macosx/Release`. There should be a `cinderTargets.cmake` file ready in that location. The file is created as part of the build process that compiles the `libcinder` target.
 
 * At the final stage, `icons` and `assets` are copied to the `Resources`
   folder.
