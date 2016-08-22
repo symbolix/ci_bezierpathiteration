@@ -121,4 +121,3 @@ function(ci_make_app)
             )
     endif()
 endfunction()
-

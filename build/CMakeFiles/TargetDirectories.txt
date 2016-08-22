@@ -1,3 +1,0 @@
-/Users/muhittinbilginer/dev/cpp_projects/ci_sessions/ci_BezierPathIteration/build/CMakeFiles/edit_cache.dir
-/Users/muhittinbilginer/dev/cpp_projects/ci_sessions/ci_BezierPathIteration/build/CMakeFiles/rebuild_cache.dir
-/Users/muhittinbilginer/dev/cpp_projects/ci_sessions/ci_BezierPathIteration/build/CMakeFiles/BezierPathIteration.dir
