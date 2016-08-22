@@ -12,3 +12,19 @@ outside the cinder project structure.
 ```
 cmake .. -DCINDER_VERBOSE=On -DCMAKE_BUILD_TYPE=Release
 ```
+
+* Once the build process is complete, run the following command to compile the
+  application:
+
+  ```
+  make
+  ```
+
+  This should compile the `BezierPathIteration.app` and place it inside the
+  following folder:
+
+  ```
+  ./build/<build_type>/BezierPathIteration.app
+  ```
+
+  * To run the application, just run `open BezierPathIteration.app`
