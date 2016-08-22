@@ -31,7 +31,7 @@ else(DEFINED ENV{CINDER_PATH})
     set(local_packages $ENV{UNIMOG_LOCAL_PACKAGES})
     set(current_package_absolute_path ${local_packages}/libs/${current_package_architecture}/${current_package_slot})
     
-    # Force find_package to use our custom lib.
+    # Make sure that the location is an absolute path.
     get_filename_component(CINDER_PATH "${current_package_absolute_path}" ABSOLUTE)
     
     # Verbose
