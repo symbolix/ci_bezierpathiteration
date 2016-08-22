@@ -7,24 +7,18 @@ outside the cinder project structure.
 
 ## Commands ##
 
-* From within the `./build` folder, run the following command:
+1. From within the `./build` folder, run the following command:
 
 ```
 cmake .. -DCINDER_VERBOSE=On -DCMAKE_BUILD_TYPE=Release
 ```
 
-* Once the build process is complete, run the following command to compile the
-  application:
+2. After the build process is complete, run `make` to compile the application.
 
-  ```
-  make
-  ```
+Once the application is successfully compiled the `BezierPathIteration.app` folder will be created inside the following location:
 
-  This should compile the `BezierPathIteration.app` and place it inside the
-  following folder:
+```
+./build/<build_type>/BezierPathIteration.app
+```
 
-  ```
-  ./build/<build_type>/BezierPathIteration.app
-  ```
-
-  * To run the application, just run `open BezierPathIteration.app`
+3. To run the application, just run `open BezierPathIteration.app`
