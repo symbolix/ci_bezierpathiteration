@@ -2,8 +2,7 @@
 
 ## Intro ##
 
-This is an example libcinder project that should demonstrate app build process
-outside the cinder project structure.
+This is an example libcinder project that should demonstrate the cinder-app build process, as an individual and stand-alone project. This example utilises the official libcinder-cmake approach that can be found here: [github.com/cinder](https://github.com/cinder/Cinder "Branch: android_linux")
 
 ## Commands ##
 
