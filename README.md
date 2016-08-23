@@ -30,9 +30,8 @@ This should be pointing to the `libcinder` folder structure.
 
 * The first script accessed from the remote `CINDER_PATH` location is `${CINDER_PATH}/proj/cmake/configure.cmake`
 
-* After that, `libcinder` is imported from the following location as an
-  `IMPORTED TARGET`:
-  `${CINDER_PATH}/lib/<platform>/<build_type>` which in the current case under `OSX`, would be `${CINDER_PATH}/lib/macosx/Release`. There should be a `cinderConfig.cmake` file ready in that location beside the static lib archive `libcinder.a` (yes, we have `libcinder` built as a STATIC target). The file is created as part of the build process that compiles the `libcinder` target.
+* After that, `libcinder` is imported from the following location:
+  `${CINDER_PATH}/lib/<platform>/<build_type>` which under `OSX`, would be `${CINDER_PATH}/lib/macosx/Release`. At this stage, `libcinder` is imported as an `IMPORTED_TARGET`. This is done through the `cinderConfig.cmake` file that is in the same folder asthe static lib archive `libcinder.a` (yes, we have `libcinder` built as a STATIC target). The file is created as part of the build process that compiles the `libcinder` target.
 
 * The `cinderConfig.cmake` inside `${CINDER_PATH}/lib/macosx/Release`will be invoking a file called `cinderTargets.cmake`. This file should have been created as part of the build process that originally compiled `libcinder`. The `cinderTargets.cmake` file should be located inside the `build` folder of `libcinder`, in that case it is `${CINDER_PATH}/build/lib/macosx/Release/cinderTargets.cmake`.
 
