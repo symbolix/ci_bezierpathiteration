@@ -51,8 +51,9 @@ else()
     MESSAGE(FATAL_ERROR "Build process terminated.")
 endif()
 
-SET(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${PROJECT_SOURCE_DIR}/cmake)
+SET(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${CINDER_PATH}/proj/cmake/modules)
 MESSAGE(STATUS "; <${PROJECT_NAME}> (DEBUG) \${CMAKE_MODULE_PATH}\ returns: ${CMAKE_MODULE_PATH}")
+MESSAGE(STATUS ";--------------------------------------------------------------------------------")
 
 # ;--------------------------------------------------------------------------------
 # ; Project Specific Sources and Includes
