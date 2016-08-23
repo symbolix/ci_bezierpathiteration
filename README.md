@@ -20,8 +20,9 @@ This should be pointing to the `libcinder` folder structure.
 * The initial `CMakeLists.txt` file is providing some basic information
   regarding the project.
 
-* The required CMake module `cinderMakeApp` is located inside the `./cmake`
-  folder. Once the local `./cmake` folder is appended to the `${CMAKE_MODULE_PATH}`, the `cinderMakeApp.cmake` file is included and the `ci_make_app` function becomes available.
+* The required CMake module `cinderMakeApp` is located inside the
+  `${CINDER_PATH}/proj/cmake/modules`
+  folder. Once the remote modules folder `${CINDER_PATH}/proj/cmake/modules` is appended to the `${CMAKE_MODULE_PATH}`, the `cinderMakeApp.cmake` file is included and the `ci_make_app` function becomes available.
 
 * The `ci_make_app` function is a wrapper that accepts various arguments and
   the intention is to fecth the configuration from the CMake chain located inside
