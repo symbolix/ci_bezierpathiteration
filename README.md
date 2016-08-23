@@ -34,7 +34,7 @@ This should be pointing to the `libcinder` folder structure.
   `imported target`:
   `${CINDER_PATH}/lib/<platform>/<build_type>` which in the current case under `OSX`, would be `${CINDER_PATH}/lib/macosx/Release`. There should be a `cinderConfig.cmake` file ready in that location beside the static lib archive `libcinder.a` (yes, we have `libcinder` built as a STATIC target). The file is created as part of the build process that compiles the `libcinder` target.
 
-* The `cinderConfig.cmake` inside `${CINDER_PATH}/lib/macosx/Release`will be invoking a `cinderTargets.cmake` file that has been created as part of the build process that compiled `libcinder`. The `cinderTargets.cmake` file should be located inside the `build` folder of `libcinder`, in that case it is `${CINDER_PATH}/build/lib/macosx/Release//cinderTargets.cmake`.
+* The `cinderConfig.cmake` inside `${CINDER_PATH}/lib/macosx/Release`will be invoking a file called `cinderTargets.cmake`. This file should have been created as part of the build process that originally compiled `libcinder`. The `cinderTargets.cmake` file should be located inside the `build` folder of `libcinder`, in that case it is `${CINDER_PATH}/build/lib/macosx/Release/cinderTargets.cmake`.
 
 * At the final stage, `icons` and `assets` are copied to the `Resources`
   folder.
